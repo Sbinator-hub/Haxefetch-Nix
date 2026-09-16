@@ -1,11 +1,22 @@
-Install process:
+# Official NixOS Flake repo for Haxefetch 
 
-`nix profile add github:Sbinator-hub/haxefetch-nix`
+## How to use this?
+- Trying without install with `shell`:
+```
+nix shell github:Sbinator-hub/haxefetch-nix
+```
 
-Update process:
+- Installing with `add`:
+```
+nix profile add github:Sbinator-hub/haxefetch-nix
+```
 
-`nix profile upgrade haxefetch-nix`
+- Updating Flake with `upgrade`:
+```
+nix profile upgrade haxefetch-nix
+```
 
-Uninstall process:
-
-`nix profile remove haxefetch-nix`
+- Removing with `remove`:
+```
+nix profile remove haxefetch-nix
+```
