@@ -1,11 +1,11 @@
 Install process:
 
-`nix profile add github:Sbinator-hub/Haxefetch-Nix`
+`nix profile add github:Sbinator-hub/haxefetch-nix`
 
 Update process:
 
-`nix profile upgrade Haxefetch-Nix`
+`nix profile upgrade haxefetch-nix`
 
 Uninstall process:
 
-`nix profile remove Haxefetch-Nix`
+`nix profile remove haxefetch-mix`
