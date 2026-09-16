@@ -8,4 +8,4 @@ Update process:
 
 Uninstall process:
 
-`nix profile remove haxefetch-mix`
+`nix profile remove haxefetch-nix`
