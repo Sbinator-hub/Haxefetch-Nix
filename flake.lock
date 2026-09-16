@@ -18,29 +18,13 @@
         "type": "github"
       }
     },
-    "haxefetch-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1789516012,
-        "narHash": "sha256-0a0+W5i/7b87lsgdCv8EDJZGPyl1bgyQd1g9QgKHKBI=",
-        "owner": "Sbinator-hub",
-        "repo": "Haxefetch",
-        "rev": "a7f0425923240c0c5c10f43ca3e6fdcfbce5bb3b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Sbinator-hub",
-        "repo": "Haxefetch",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1789286504,
-        "narHash": "sha256-eiEK7cKZORNEvX0GeF3RtNEF/JXhgf2RqSp3230q13E=",
+        "lastModified": 1789546076,
+        "narHash": "sha256-zVxLZiSnmaaPLwnhj7pwmqe3axBg/C6nG5JZsJMh2g4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "ef34387ddd751e1ab8857adf4676492d32eb24ec",
+        "rev": "b1b875982b17dabde9b4a37f3e229e74913e6db3",
         "type": "github"
       },
       "original": {
@@ -53,7 +37,6 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "haxefetch-src": "haxefetch-src",
         "nixpkgs": "nixpkgs"
       }
     },
