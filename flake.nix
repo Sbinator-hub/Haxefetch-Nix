@@ -3,12 +3,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    haxefetch-src = {
-      url = "github:Sbinator-hub/Haxefetch";
-      flake = false;
-    };
   };
-  outputs = { self, nixpkgs, flake-utils, haxefetch-src }:
+  outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
@@ -16,13 +12,15 @@
         packages.default = pkgs.stdenv.mkDerivation {
           pname = "haxefetch";
           version = "git";
-          src = haxefetch-src;
+          src = pkgs.fetchurl {
+            url = "https://raw.githubusercontent.com/Sbinator-hub/Haxefetch/main/binary/haxefetch";
+            hash = "sha256-h+/7e0V0yQPwZrllZh0bmgtB5bOHs6M0oWc1ozB9Css=";
+          };
+          dontUnpack = true;
           dontBuild = true;
-          nativeBuildInputs = [ pkgs.autoPatchelfHook ];
-          buildInputs = [ pkgs.stdenv.cc.cc.lib ];
           installPhase = ''
             mkdir -p "$out/bin"
-            cp binary/haxefetch "$out/bin/haxefetch"
+            cp "$src" "$out/bin/haxefetch"
             chmod +x "$out/bin/haxefetch"
           '';
           meta = {
@@ -38,7 +36,11 @@
           exePath = "/bin/haxefetch";
         };
         devShells.default = pkgs.mkShell {
-          packages = [ pkgs.haxe pkgs.neko pkgs.git ];
+          packages = [
+            pkgs.haxe
+            pkgs.neko
+            pkgs.git
+          ];
         };
       });
 }
