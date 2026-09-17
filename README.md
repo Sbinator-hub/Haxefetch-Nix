@@ -22,6 +22,8 @@ nix profile add github:Sbinator-hub/haxefetch-nix
 
 - Updating Flake with `upgrade`:
 ```
+nix-collect-garbage
+
 nix profile upgrade haxefetch-nix
 ```
 
