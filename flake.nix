@@ -1,5 +1,5 @@
 {
-  description = "Haxefetch - a fetch program written in Haxe";
+  description = "Haxefetch - a fetch program written in Haxe.";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
